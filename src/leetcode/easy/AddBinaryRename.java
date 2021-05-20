@@ -1,6 +1,6 @@
 package leetcode.easy;
 
-public class AddBinary {
+public class AddBinaryRename {
 	public String addBinary(String a, String b) {
 		if (a.length() >= b.length()) {
 			return addBinaryRealy(a.toCharArray(), b.toCharArray());
@@ -43,7 +43,7 @@ public class AddBinary {
 	}
 
 	public static void main(String[] args) {
-		AddBinary s = new AddBinary();
+		AddBinaryRename s = new AddBinaryRename();
 		String a = "1010";
 		String b = "1011";
 		System.out.println(s.addBinary(a, b));
