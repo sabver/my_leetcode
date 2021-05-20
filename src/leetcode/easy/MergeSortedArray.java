@@ -1,6 +1,19 @@
 package leetcode.easy;
 
 public class MergeSortedArray {
+	public void merge2(int[] nums1, int m, int[] nums2, int n) {
+		int index1 = m-1,index2 = n-1,index = nums1.length - 1;
+		while( index2 != -1 ){
+			if( index1 == -1 || nums1[index1] <= nums2[index2] ){
+				nums1[index] = nums2[index2];
+				index2--;
+			}else{
+				nums1[index] = nums1[index1];
+				index1--;
+			}
+			index--;
+		}
+	}
 	public void merge(int[] nums1, int m, int[] nums2, int n) {
 		int p1 = m - 1;
 		int p2 = n - 1;
