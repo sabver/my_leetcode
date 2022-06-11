@@ -2,6 +2,8 @@ package leetcode.util;
 
 import java.util.List;
 
+import leetcode.medium.PrintBinaryTree;
+
 /**
  * 定义一个工具类
  * 
@@ -95,4 +97,17 @@ public class Util {
 			System.out.println(result.get(i));
 		}
 	}
+	
+	public static void printListStr(List<List<String>> result) {
+		System.out.println("size:" + result.size());
+		for (int i = 0; i < result.size(); i++) {
+			System.out.println(result.get(i));
+		}
+	}
+	
+	public static void printBinaryTree(TreeNode root) {
+		PrintBinaryTree p = new PrintBinaryTree();
+		p.printTree(root);
+	}
+	
 }
