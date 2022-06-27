@@ -14,10 +14,8 @@ public class Util {
 	/**
 	 * 生成一个数量为number的随机数组，里面元素最小值为max，最小值大于0
 	 * 
-	 * @param number
-	 *            需要生成的数组的数量
-	 * @param max
-	 *            数组里面的最大元素
+	 * @param number 需要生成的数组的数量
+	 * @param max    数组里面的最大元素
 	 * @return 一个数量为number的随机数组
 	 */
 	public static int[] createRandomArray(int number, int max) {
@@ -28,13 +26,37 @@ public class Util {
 		}
 		return result;
 	}
-	
+
 	/**
 	 * 打印里面的数组元素
 	 * 
 	 * @param array
 	 */
 	public static void printArray(double[] array) {
+		String result = "[";
+		for (int i = 0; i < array.length; i++) {
+			if (i != array.length - 1) {
+				result += (array[i] + ",");
+			} else {
+				result += (array[i]);
+			}
+		}
+		System.out.println(result + "]");
+	}
+	
+	public static void printArray(boolean[] array) {
+		String result = "[";
+		for (int i = 0; i < array.length; i++) {
+			if (i != array.length - 1) {
+				result += (array[i] + ",");
+			} else {
+				result += (array[i]);
+			}
+		}
+		System.out.println(result + "]");
+	}
+	
+	public static void printArray(String[] array) {
 		String result = "[";
 		for (int i = 0; i < array.length; i++) {
 			if (i != array.length - 1) {
@@ -72,12 +94,9 @@ public class Util {
 	/**
 	 * 打印从p到r的数组元素
 	 * 
-	 * @param array
-	 *            需要打印的数组
-	 * @param p
-	 *            开始索引
-	 * @param r
-	 *            结束索引
+	 * @param array 需要打印的数组
+	 * @param p     开始索引
+	 * @param r     结束索引
 	 */
 	public static void printArray(int[] array, int p, int r) {
 		String result = "";
@@ -97,17 +116,21 @@ public class Util {
 			System.out.println(result.get(i));
 		}
 	}
-	
+
 	public static void printListStr(List<List<String>> result) {
 		System.out.println("size:" + result.size());
 		for (int i = 0; i < result.size(); i++) {
 			System.out.println(result.get(i));
 		}
 	}
-	
+
 	public static void printBinaryTree(TreeNode root) {
 		PrintBinaryTree p = new PrintBinaryTree();
 		p.printTree(root);
 	}
-	
+
+	public static void p(Object obj) {
+		System.out.println(obj);
+	}
+
 }
